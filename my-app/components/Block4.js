@@ -7,12 +7,12 @@ export default function P1() {
             <Image source={img2} style={styles.img1} />
             <View style={styles.block1}>
                 <Text style={styles.text1}>
-                    Поддержка 24/7
+                    Регистрация ООО
                 </Text>
             </View>
             <View style={styles.block2}>
                 <Text style={styles.text2}>
-                    Наш call-центр ответит на все ваши вопросы
+                    С одним учредителем
                 </Text>
             </View>
         </View>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
     block1: {
         position: 'absolute',
-        width: 249,
+        width: 280,
         height: 34,
         left: 720,
         top: 149

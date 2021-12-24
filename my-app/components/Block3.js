@@ -7,13 +7,13 @@ export default function P1() {
             <Image source={img1} style={styles.img1} />
             <View style={styles.block1}>
                 <Text style={styles.text1}>
-                    Открываем счёт для ИП там, {"\n"}
-                    где вам удобно
+                    Банк для любого бизнеса
                 </Text>
             </View>
             <View style={styles.block2}>
                 <Text style={styles.text2}>
-                    Открытие расчётного счёта без посещения офиса
+                    Удобное приложение и личный кабинет{'\n'}
+                    Поддержка 24/7 в чате
                 </Text>
             </View>
         </View>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         width: 476,
         height: 23,
         left: 190,
-        top: 246
+        top: 221
     },
     img1: {
         width: 425,
