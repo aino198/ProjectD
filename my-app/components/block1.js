@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import {useState} from 'react';
-import img1 from '../../img/dreamstime_xxl_29647630-01.jpg'
+import React, {useState} from 'react';
+import img1 from '../../img/dreamstime_xxl_29647630-01.jpg';
+import Block8 from '../components/block8';
+import {Link, BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 const Block1 = () => {
     const [hovered, setHovered] = useState(false);
@@ -13,36 +15,44 @@ const Block1 = () => {
         setHovered(false);
     };
 
+    const move = () => {
+        window.scrollTo({
+            top: 4200,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <View style={styles.main}>
             <View style={styles.titleBlock}>
                 <View style={styles.mainBlock}>
                     <Text style={styles.titleAEB}> АЭБ <Text style={styles.title}>- надежный и долгосрочный партнер для всех!</Text></Text>
                     <Text style={styles.text1}>
-                        Бесплатное обслуживание на пакете «Для развития» первые 6 месяцев. Предложение до 20.12.21
+                        Откройте счет «Для бизнеса» со скидкой 25% при оплате авансом за 1 год любого пакета услуг.
                     </Text>
-                    <TouchableOpacity 
-                        style={hovered ? styles.button2 : styles.button1}
-                        onMouseEnter={mouseEntered}
-                        onMouseLeave={mouseLeft}
-                    >
-                        <Text style={hovered ? styles.buttontext2 : styles.buttontext1}>Стать клиентом</Text>
-                    </TouchableOpacity>
+                            <TouchableOpacity 
+                                style={hovered ? styles.button2 : styles.button1}
+                                onMouseEnter={mouseEntered}
+                                onMouseLeave={mouseLeft}
+                                onPress={move}
+                            >
+                                <Text style={hovered ? styles.buttontext2 : styles.buttontext1}>Открыть счет</Text>
+                            </TouchableOpacity>
                 </View>
                 <Image source={img1} style={styles.image1} />
             </View>
             <View style={styles.mainTable}>
                 <View style={styles.column1}>
-                    <Text style={styles.title2}>6 000</Text>
-                    <Text style={styles.text2}>предпринимателей доверяют нам</Text>
+                    <Text style={styles.title2}>7 000</Text>
+                    <Text style={styles.text2}>активных клиентов малого бизнеса</Text>
                 </View>
                 <View style={styles.column2}>
-                    <Text style={styles.title2}>1,8 млн ₽</Text>
-                    <Text style={styles.text2}>переводите себе на карту без комиссии за 6 мес. на пакете «Для развития» </Text>
+                    <Text style={styles.title2}>До 20 млн ₽</Text>
+                    <Text style={styles.text2}>переводите себе на карту  на пакете «Для бизнеса».</Text>
                 </View>
                 <View style={styles.column3}>
-                    <Text style={styles.title2}>5 940 ₽</Text>
-                    <Text style={styles.text2}>сэкономьте на обслуживании при открытии счёта онлайн на пакете  «Для развития» </Text>
+                    <Text style={styles.title2}>25% скидка</Text>
+                    <Text style={styles.text2}>при оплате авансом за 1 год любого пакета услуг.</Text>
                 </View>
             </View>
         </View>
@@ -57,13 +67,13 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize: 40,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#fff',
         width: 643
     },
     titleAEB:{
         fontSize: 40,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#2F88F0',
         width: 643
     },
@@ -74,7 +84,7 @@ const styles = StyleSheet.create({
     },
     text1:{
         fontSize: 21,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#fff',
         width:537,
         marginTop: 31,
@@ -107,12 +117,12 @@ const styles = StyleSheet.create({
     },
     buttontext1:{
         fontSize: 18,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#fff'
     },
     buttontext2:{
         fontSize: 18,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#2F88F0'
     },
     image1:{
@@ -133,12 +143,13 @@ const styles = StyleSheet.create({
     text2:{
         width: 290,
         fontSize: 20,
-        fontFamily: 'Roboto',
-        color: '#fff'
+        fontFamily: 'Arial',
+        color: '#fff',
+        marginTop: 10
     },
     title2:{
         fontSize: 32,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#2F88F0'
     },
     column2:{

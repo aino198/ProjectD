@@ -7,12 +7,12 @@ export default function P1() {
             <Image source={img1} style={styles.img1} />
             <View style={styles.block1}>
                 <Text style={styles.text1}>
-                Мы за вас
+                    АЭБ против мошенников
                 </Text>
             </View>
             <View style={styles.block2}>
                 <Text style={styles.text2}>
-                Проинформируем вас об изменениях в законодательстве, которые коснутся вашего бизнеса
+                    Защитим вас от любого вида мошенничества
                 </Text>
             </View>
         </View>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
     block1: {
         position: 'absolute',
-        width: 168,
+        width: 400,
         height: 34,
         left: 720,
         top: 135

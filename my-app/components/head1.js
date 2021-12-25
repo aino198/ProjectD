@@ -23,7 +23,7 @@ const fun = () => {
   return (
   
     <View style={styles.main}>
-        <View >
+        <View style={[100]}>
         <TouchableOpacity onPress={()=> Linking.openURL('https://albank.ru/ru/') }> 
         <Image source={Img} style={styles.image}/>
         </TouchableOpacity>
