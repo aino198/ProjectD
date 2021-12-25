@@ -19,7 +19,7 @@ const styles = StyleSheet.create( {
         backgroundColor: '#27303E',
     },
     row:{
-      marginLeft:100,
+      marginLeft:150,
       marginTop:30,
       flexDirection: 'row',
       marginBottom:0
@@ -36,7 +36,7 @@ const styles = StyleSheet.create( {
       position:"absolute"
     },
     row2:{
-      marginLeft:100,
+      marginLeft:150,
       marginTop:10,
       flexDirection: 'row',
     },
@@ -48,7 +48,7 @@ const styles = StyleSheet.create( {
     },
     line:{
       marginTop:20,
-      marginLeft:100,
+      marginLeft:150,
       backgroundColor: '#FFFFFF',
       opacity:'60%',
       width:1190,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create( {
 
     },
     row3:{
-      marginLeft:100,
+      marginLeft:150,
       marginTop:20,
       flexDirection: 'row',
     },
@@ -122,14 +122,15 @@ const Footer = () => {
           <Image style={styles.faceBook} source={faceBook}/>
           <Image style={styles.insta} source={insta}/>
         </View>
-        <View style={[{marginTop:28,marginLeft:100}]}></View>
+        <View style={[{marginTop:28,marginLeft:50}]}>
         <Image style={styles.zlet} source={zlet}/>
         <a href="https://albank.ru/ru/interest-rates/"><Text style={[styles.text2, {marginTop:10,marginLeft:100}]}>Информация о процентных ставках по договорам банковского вклада с физическими лицами</Text></a>
         <a href="https://albank.ru/ru/disclosure/"><Text style={[styles.text2, {marginTop:10,marginLeft:100}]}>Раскрытие информации профессиональным участником рынка ценных бумаг</Text></a>
         <a href="https://disclosure.skrin.ru/disclosure/1435138944"><Text style={[styles.text2, {marginTop:10,marginLeft:100}]}>Раскрытие информации на сайте информационного агенства АО «СКРИН»</Text></a>
         <a href="https://albank.ru/local/templates/Aeb/assets/docs/RB2602_20210616.pdf"><Text style={[styles.text2, {marginTop:10,marginLeft:100}]}>Информация о лицах, под контролем либо значительным влиянием которых находится банк</Text></a>
-        <View style={[styles.line,{marginTop:30}]}></View>
+        <View style={[styles.line,{marginTop:30,marginLeft:100}]}></View>
         <a href="https://albank.ru/ru/disclosure/"><Text style={[styles.proztext, {fontSize:12, marginLeft:100,marginTop:10}]}>Перейти на старый сайт</Text></a>
+        </View>
       </View>
   );
 }
