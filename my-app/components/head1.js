@@ -1,13 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
 import { StyleSheet, Text, View,Image, ListViewBase, Linking} from 'react-native';
-
 import Img from '../../img/logo-ng.png';
 import Img2 from '../../img/126474.png';
 import Img3 from '../../img/вход.png';
 import { TouchableOpacity } from 'react-native-web';
-
-
 
 const fun = () => {
   const [hovered, setHovered] = useState(false);

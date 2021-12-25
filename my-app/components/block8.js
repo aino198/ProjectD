@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, CheckBox, Linking } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, CheckBox, Linking, Alert } from 'react-native';
 import captch from '../../img/captcha.png';
 import upd from '../../img/cycle+interface+update+icon-1320184070507016548.png';
 import whatsapp from '../../img/Whatsapp-logo-icon-transparent.png';
+import test from '../test.txt';
+//import RNFS from 'react-native-fs';
+import {saveAs} from '../node_modules/file-saver/';
 
 const Block8 = () => {
     const [name, setName] = useState('');
@@ -13,8 +16,14 @@ const Block8 = () => {
 
     const sendForm = () => {
         if (checked) {
-            //do smthng
-        }
+            var blob = new Blob([name +'\n'+ phone], { type: "text/plain;charset=utf-8" });
+            saveAs(blob, "D:/test.txt");
+            alert("Данные отправлены, с вами обязательно свяжутся!");
+            setName('');
+            setPhone('');
+            setSymbols('');
+            setChecked(false);
+        };
     };
 
     const mouseEntered = () => {
@@ -64,6 +73,7 @@ const Block8 = () => {
                 style={hovered ? styles.button2 : styles.button1}
                 onMouseEnter={mouseEntered}
                 onMouseLeave={mouseLeft}
+                onPress={sendForm}
             >
                 <Text style={hovered ? styles.text3 : styles.text2}>Отправить</Text>
             </TouchableOpacity>
