@@ -23,11 +23,9 @@ const fun = () => {
   return (
   
     <View style={styles.main}>
-        <View style={[100]}>
-        <TouchableOpacity onPress={()=> Linking.openURL('https://albank.ru/ru/') }> 
+        <TouchableOpacity onPress={()=> Linking.openURL('https://albank.ru/ru/') }style={[{width:100}]}> 
         <Image source={Img} style={styles.image}/>
         </TouchableOpacity>
-        </View>
         <View style={styles.head}>
             <Text style={styles.text} onPress={()=> Linking.openURL('https://albank.ru/ru/')}> 
             Частным клиентам
@@ -44,7 +42,7 @@ const fun = () => {
             <Text style={[styles.text2, {marginLeft: 435}]} onPress={()=> Linking.openURL('https://albank.ru/ru/offices/')} >
               Отделения и банкоматы
             </Text>
-            <Image source={Img2} style={[{marginLeft:17,width:14,height:15}]} />
+            <Image source={Img2} style={[{marginLeft:17,width:15,height:15}]} />
           </View>
 
           <View style={styles.block3}>
@@ -60,10 +58,10 @@ const fun = () => {
             <Text style={[styles.text3, {marginLeft:41}]} >
               Карты
             </Text>
-            <TouchableOpacity onPress={()=> Linking.openURL('https://albank.ru/ru/offices/')} >
+            <TouchableOpacity onPress={()=> Linking.openURL('https://albank.ru/ru/offices/')} style={[{width:30}]}>
             <Image source={Img3} style={[{marginLeft:782,width:30,height:30,marginTop:-2}] } />
             </TouchableOpacity>
-            <Text style={[styles.text,{marginLeft:4}]} onPress={()=> Linking.openURL('https://albank.ru/ru/offices/')} > 
+            <Text style={[styles.text,{marginLeft:786}]} onPress={()=> Linking.openURL('https://albank.ru/ru/offices/')} > 
             АЭБ Онлайн
             </Text>
           </View>
