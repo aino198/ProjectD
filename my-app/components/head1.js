@@ -3,20 +3,33 @@ import React,{useState} from 'react';
 import { StyleSheet, Text, View,Image, ListViewBase, Linking} from 'react-native';
 
 import Img from '../../img/logo-ng.png';
+import Img2 from '../../img/126474.png';
+import Img3 from '../../img/вход.png';
+import { TouchableOpacity } from 'react-native-web';
 
 
 
 const fun = () => {
-  const [status, setStatus] = useState(false);
+  const [hovered, setHovered] = useState(false);
+
+    const mouseEntered = () => {
+        setHovered(true);
+    };
+
+    const mouseLeft = () => {
+        setHovered(false);
+    };
 
   return (
   
-    <View>
-        <View>
-        <Image source={Img} style={styles.image} />
+    <View style={styles.main}>
+        <View >
+        <TouchableOpacity onPress={()=> Linking.openURL('https://albank.ru/ru/') }> 
+        <Image source={Img} style={styles.image}/>
+        </TouchableOpacity>
         </View>
         <View style={styles.head}>
-            <Text style={styles.text} onPress={()=> Linking.openURL('https://albank.ru/ru/')}on> 
+            <Text style={styles.text} onPress={()=> Linking.openURL('https://albank.ru/ru/')}> 
             Частным клиентам
             </Text>
             <Text style={styles.text2}onPress={()=> Linking.openURL('https://albank.ru/ru/corp/')}> 
@@ -28,14 +41,33 @@ const fun = () => {
             <Text style={styles.text2}  > 
             Ещё
             </Text >    
-            <Text >
-            Отделения и банкоматы
+            <Text style={[styles.text2, {marginLeft: 435}]} onPress={()=> Linking.openURL('https://albank.ru/ru/offices/')} >
+              Отделения и банкоматы
             </Text>
-            
-        </View>
-        
-       
-     
+            <Image source={Img2} style={[{marginLeft:17,width:14,height:15}]} />
+          </View>
+
+          <View style={styles.block3}>
+          <Text style={[styles.text3, {marginLeft:41}]} >
+              Кредиты
+            </Text>
+            <Text style={[styles.text3, {marginLeft:41}]} >
+              Ипотека
+            </Text>
+            <Text style={[styles.text3, {marginLeft:41}]} >
+              Вклады
+            </Text>
+            <Text style={[styles.text3, {marginLeft:41}]} >
+              Карты
+            </Text>
+            <TouchableOpacity onPress={()=> Linking.openURL('https://albank.ru/ru/offices/')} >
+            <Image source={Img3} style={[{marginLeft:782,width:30,height:30,marginTop:-2}] } />
+            </TouchableOpacity>
+            <Text style={[styles.text,{marginLeft:4}]} onPress={()=> Linking.openURL('https://albank.ru/ru/offices/')} > 
+            АЭБ Онлайн
+            </Text>
+          </View>
+              
     </View>
     
     
@@ -43,45 +75,51 @@ const fun = () => {
 }
 
 const styles = StyleSheet.create({
-  head:{
-      flex:1,
-      flexDirection:"row",
-      width: '100%',
-      position: 'absolute',
-      marginLeft:267,
-      marginTop:60
-    //  left:267,
-    //  top: 60,
+  main:{
+    width:'100%',
+    height:155,
   },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  head:{
+    flex:1,
+    flexDirection:"row",
+    position: 'absolute',
+    marginLeft:267,
+    marginTop:60
   },
   text:{
       fontSize:14,
-      color:'#2F88F0'
+      color:'#2F88F0',
+      fontWeight:500,
   },
   text2:{
     fontSize:14,
     color:'black',
-    marginLeft:17
+    marginLeft:17,
+    fontWeight:400,
 },
 text3:{
-  flex:1,
-  flexDirection:'row',
   fontSize:14,
   color:'black',
-  marginRight:24,
-  marginTop:60
-  
+  fontWeight:500,
 },
   image:{
       width: 130.38,
       height: 41,
       marginTop: 46,
       marginLeft: 100,
+  },
+  block2:{
+    flex:1,
+    position:'absolute',
+    left:435,
+    marginTop:60,
+    flexDirection:'row',
+
+  },
+  block3:{
+    flexDirection:'row',
+    marginTop:25,
+    marginLeft:100,
   }
 });
 export default fun;
