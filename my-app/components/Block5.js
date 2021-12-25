@@ -7,13 +7,12 @@ export default function P1() {
             <Image source={img1} style={styles.img1} />
             <View style={styles.block1}>
                 <Text style={styles.text1}>
-                Зарегистрируем ИП или ООО {"\n"}
-                за 7 дней
+                    Регистрация ИП
                 </Text>
             </View>
             <View style={styles.block2}>
                 <Text style={styles.text2}>
-                Для регистрации ИП нужет только паспорт
+                    Без доверенностей, нотариусов и госпошлины
                 </Text>
             </View>
         </View>
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
         width: 411,
         height: 23,
         left: 190,
-        top: 253,
+        top: 230,
     },
     img1: {
         width: 470,
