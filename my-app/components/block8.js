@@ -27,7 +27,7 @@ const Block8 = () => {
 
     return (
         <View style={styles.main}>
-            <Text style={styles.title1}>Стать клиентом</Text>
+            <Text style={styles.title1}>Открыть счет</Text>
             <TextInput
                 style={styles.input}
                 value={name}
@@ -80,13 +80,13 @@ const Block8 = () => {
 const styles=StyleSheet.create({
     main: {
         width: '100%',
-        height: 814,
+        height: 710,
         alignItems: 'center',
         backgroundColor: '#fff'
     },
     title1: {
         fontSize: 30,
-        fontFamily: 'sans-serif',
+        fontFamily: 'Arial',
         color: '#000',
         fontWeight: 'bold'
     },
@@ -140,12 +140,12 @@ const styles=StyleSheet.create({
     },
     text1: {
         fontSize: 20,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#000'
     },
     link: {
         fontSize: 20,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#2F88F0'
     },
     button1: {
@@ -172,19 +172,18 @@ const styles=StyleSheet.create({
     },
     text2: {
         fontSize: 22,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#fff'
     },
     text3: {
         fontSize: 22,
-        fontFamily: 'Roboto',
+        fontFamily: 'Arial',
         color: '#2F88F0'
     },
     whatsappLogo: {
-        width: 80,
-        height: 80,
-        marginTop: 50,
-        marginLeft: 650,
+        width: 60,
+        height: 60,
+        marginLeft: 680,
         marginBottom: 10,
         position: 'absolute' 
     }
